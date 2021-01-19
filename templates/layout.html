@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>My movies - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mymovies.css') }}"/>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="{{ url_for('home_page') }}">Home</a></li>
+            <li><a href="{{ url_for('movies_page') }}">List movies</a></li>
+          </ul>
+        </nav>
+    </header>
+    {% block body %}{% endblock %}
+  </body>
+</html>
