@@ -19,7 +19,7 @@ def get_champion(ID, name, star, account):
                 condition = f"ID = {ID}"
             else:
                 condition = f"name = {name} AND star = {star} AND account = '{account}'"
-            cur.execute(f"SELECT * FROM champions WHERE '{condition}';")
+            cur.execute(f"SELECT * FROM champion WHERE '{condition}';")
 
 
 def update_champion(column, value, condition):
@@ -31,7 +31,7 @@ def update_champion(column, value, condition):
 def remove_champion(ID):
     with psycopg2.connect(DATABASE_URL) as conn:
         with conn.cursor() as cur:
-            cur.execute(f"DELETE FROM champions WHERE ID = {ID};")
+            cur.execute(f"DELETE FROM champion WHERE ID = {ID};")
 
 
 def add_synergy(type, rootchamp, targetchamp, effect):
