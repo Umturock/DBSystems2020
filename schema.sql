@@ -1,7 +1,7 @@
 drop table synergy;
+drop table attributes;
 drop table champion;
 drop table account;
-drop table attributes;
 
 CREATE TABLE IF NOT EXISTS account (
     ID              VARCHAR(50) PRIMARY KEY,

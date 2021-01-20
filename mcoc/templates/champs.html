@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>My movies - Movie list</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}"/>
+  </head>
+  <body>
+    <h1>Movies</h1>
+    <table class="table is-narrow is-striped is-hoverable" width="100%">
+      <thead>
+          <tr>
+              <th> ID</th>
+              <th>Name</th>
+              <th>Rank</th>
+              <th>Level</th>
+              <th>Star</th>
+              <th>Signature level</th>
+              <th>Account</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>{{ champ[0][0] }}</td>
+              <td>{{ champ[0][1] }}</td>
+              <td>{{ champ[0][2] }}</td>
+              <td>{{ champ[0][3] }}</td>
+              <td>{{ champ[0][4] }}</td>
+              <td>{{ champ[0][5] }}</td>
+              <td>{{ champ[0][6] }}</td>
+
+          </tr>
+      </tbody> 
+  </table>
+  </body>
+</html>

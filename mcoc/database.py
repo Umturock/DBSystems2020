@@ -19,7 +19,9 @@ def get_champion(ID, name, star, account):
                 condition = f"ID = {ID}"
             else:
                 condition = f"name = {name} AND star = {star} AND account = '{account}'"
-            cur.execute(f"SELECT * FROM champion WHERE '{condition}';")
+            cur.execute(f"SELECT * FROM champion WHERE {condition};")
+            champ = cur.fetchall()
+            return champ
 
 
 def update_champion(column, value, condition):
